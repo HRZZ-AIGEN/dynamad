@@ -1,0 +1,9 @@
+README.md
+setup.py
+dynamad/__init__.py
+dynamad/myfunctions.py
+dynamad.egg-info/PKG-INFO
+dynamad.egg-info/SOURCES.txt
+dynamad.egg-info/dependency_links.txt
+dynamad.egg-info/requires.txt
+dynamad.egg-info/top_level.txt
