@@ -1,7 +1,7 @@
 # Dynamic applicability domain (dAD)
 Dynamic applicability domain is a method for defining the applicability domain of a sample x based on the prelocated conformity regions in the training set. The method is based on the conformal prediction framework, which is a framework for constructing prediction intervals with confidence estimates. The method is described in detail in the preprint [Dynamic applicability domain (dAD) for compound-target binding affinity prediction task with confidence guarantees](https://doi.org/10.1101/2022.08.22.504786).
 
-![infographic](https://vscode-remote%2Bssh-002dremote-002bjane.vscode-resource.vscode-cdn.net/home/dorsolic/dAD/FUNCTIONS/infographic_dad_clean.png?version%3D1683832759390)
+<img width="1023" alt="infographic_dad_clean" src="https://github.com/HRZZ-AIGEN/dynamad/assets/75166378/9bc95c15-1179-4ed4-a0e1-45c56aa0b4ef">
 
 
 # Documentation for the dynamad library
