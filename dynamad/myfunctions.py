@@ -46,7 +46,7 @@ def conf_region_e2(pairs, e2_sim, q, id2='entity_2'):
     return t_conf_reg, t_q_ls
 
 
-def calibration(pairs, ispace, c_conf, t_conf, i):
+def interacting_pairs(pairs, ispace, c_conf, t_conf, i):
     
     # Find the interaction landscape of extracted conformity subspaces
     conf_region = pd.merge(c_conf[pairs.loc[i, 'entity_1']], ispace)
@@ -83,7 +83,7 @@ def dad_cv(x, pairs, tr_pairs, cv, tr_y, model, e1_sim, e2_sim, ispace, k, q, id
         try:
 
             # Find the interaction landscape of extracted conformity subspaces
-            conf_region = calibration(pairs=pairs_df, ispace=ispace, c_conf=c_conf_reg, t_conf=t_conf_reg, i=i)
+            conf_region = interacting_pairs(pairs=pairs_df, ispace=ispace, c_conf=c_conf_reg, t_conf=t_conf_reg, i=i)
             conf_region = pd.merge(conf_region, tr_pairs_df, on=["entity_1", "entity_2", "y"])
             conf_region['nonconf'] = abs(conf_region['y'] - conf_region['cv_pred'])
             conf_region['pred_diff'] = abs(conf_region['y'] - pairs_df['y_pred'][i])
@@ -141,7 +141,7 @@ def dad_nn(x, pairs, model, e1_sim, e2_sim, ispace, k, q, id1='entity_1', id2='e
         try:
 
             # Find the interaction landscape of extracted conformity subspaces
-            conf_region = calibration(pairs=pairs_df, ispace=ispace, c_conf=c_conf_reg, t_conf=t_conf_reg, i=i)
+            conf_region = interacting_pairs(pairs=pairs_df, ispace=ispace, c_conf=c_conf_reg, t_conf=t_conf_reg, i=i)
             
             conf_region['nonconf'] = abs(conf_region['y'] - conf_region['y'].mean())
             conf_region['pred_diff'] = abs(conf_region['y'] - pairs_df['y_pred'][i])
