@@ -15,8 +15,8 @@ The functions take these arguments:
 * `id1` - column name for e1 samples
 * `id2` - column name for e2 samples
 
-## II) Calibration function
-The calibration function is used to retrieve the calibration set of experimentally measured interactions in the traning set for sample x, based on the prelocated conformity regions. It takes these arguments:
+## II) Locate existing interacting pairs
+The interacting_pairs function is used to retrieve the calibration set of experimentally measured interactions in the traning set for sample x, based on the prelocated conformity regions. It takes these arguments:
 * `pairs` - interacting pairs for a given dataset, usually compounds and targets (pandas dataframe)
 * `c_conf` - conformity region for e1
 * `t_conf` - conformity region for e2
